@@ -99,7 +99,7 @@ function fakeMessage() {
 		return false;
 	}
 
-	const loadingMessage = $('<div class="message__loading new"></div>');
+	const loadingMessage = $('<div class="message message__loading new"></div>');
 	const figure = $('<figure class="avatar"></figure>');
 	const image = $('<img>').attr('src', avatarImage);
 
