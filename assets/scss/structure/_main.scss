@@ -132,6 +132,22 @@
 			// .message__loading
 
 			&__loading {
+				&::before {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					content: '';
+					display: block;
+					width: 3px;
+					height: 3px;
+					border-radius: 50%;
+					background: rgba(255, 255, 255, .5);
+					z-index: 2;
+					margin-top: 4px;
+					animation: ball .45s cubic-bezier(0, 0, .15, 1) alternate infinite;
+					-webkit-animation: ball .45s cubic-bezier(0, 0, .15, 1) alternate infinite;
+				}
 				span {
 					display: block;
 					font-size: 0;
@@ -159,14 +175,13 @@
 					}
 
 					&::before {
-						border: none;
-						animation-delay: .15s;
-						-webkit-animation-delay: .15s;
+						margin-left: -7px;
 					}
 
 					&::after {
 						animation-delay: .3s;
 						-webkit-animation-delay: .3s;
+						margin-left: 7px;
 					}
 				}
 

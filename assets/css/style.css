@@ -179,6 +179,22 @@ body {
   animation: bounce 0.5s linear both;
   -webkit-animation: bounce 0.5s linear both;
 }
+.chat__messages .message__loading::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  margin-top: 4px;
+  animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+}
 .chat__messages .message__loading span {
   display: block;
   font-size: 0;
@@ -204,13 +220,12 @@ body {
   -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
 }
 .chat__messages .message__loading span::before {
-  border: none;
-  animation-delay: 0.15s;
-  -webkit-animation-delay: 0.15s;
+  margin-left: -7px;
 }
 .chat__messages .message__loading span::after {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
+  margin-left: 7px;
 }
 .chat__messages .message__loading::before {
   position: absolute;
