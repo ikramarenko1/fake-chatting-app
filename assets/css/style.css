@@ -67,6 +67,10 @@ body {
   overflow: hidden;
 }
 
+.mCSB_inside > .mCSB_container {
+  margin-right: 5px !important;
+}
+
 /*
 	===== CHAT =====
 */
