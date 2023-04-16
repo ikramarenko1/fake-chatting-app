@@ -5,7 +5,7 @@ const avatarImage = './assets/images/avatar.jpg';
 
 // Сообщения, которые будет присылать фейковый пользователь
 const fakeMessages = [
-	'Hi there, it\'s the <img src="./assets/images.avatar.jpg"> first message!',
+	'Hi there, it\'s the first message!',
 	'Nice to meet you!',
 	'How are you?',
 	'Not too bad, thanks',
