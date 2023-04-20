@@ -22,8 +22,11 @@
 
 	&__header {
 		background: rgba(0, 0, 0, .6);
-		padding: 10px 10px 10px 50px;
+		padding: 10px 20px;
 		color: #fff;
+		display: flex;
+		align-items: center;
+		gap: 10px;
 		flex: 0 1 55px;
 		position: relative;
 		z-index: 2;
@@ -32,26 +35,49 @@
 
 		h1, h2 {
 			font-weight: normal;
-			font-size: 10px;
+			font-size: 12px;
 			margin: 0;
 			padding: 0;
 		}
 
+		h1 { 
+			@media (max-width: 325px) {
+				display: none;
+			}
+		}
+
 		h2 {
 			color: rgba(255, 255, 255, .5);
-			font-size: 8px;
+			font-size: 10px;
 			letter-spacing: 1px;
+			position: relative;
+			padding-left: 10px;
+
+			span {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background-color: green;
+			}
 		}
+	}
+
+	// .chat__back-icon
+
+	&__back-icon {
+		width: 15px;
+		margin-right: 5px;
 	}
 
 	// .chat__avatar
 
 	&__avatar {
-		position: absolute;
-		top: 8px;
-		left: 10px;
-		width: 30px;
-		height: 30px;
+		width: 35px;
+		height: 35px;
 		z-index: 1;
 		border-radius: 30px;
 		overflow: hidden;
@@ -228,9 +254,9 @@
 	// .chat__send-box
 	
 	&__send-box {
-		flex: 0 1 40px;
+		flex: 0 1 55px;
 		width: 100%;
-		background: rgba(0, 0, 0, .3);
+		background: rgba(0, 0, 0, .6);
 		padding: 10px;
 		position: relative;
 
@@ -246,12 +272,13 @@
 		border: none;
 		outline: none;
 		resize: none;
-		color: rgba(255, 255, 255, .7);
-		font-size: 11px;
-		height: 17px;
+		color: rgb(255, 255, 255);
+		font-size: 14px;
+		height: 40px;
+		line-height: 1.2;
 		margin: 0;
 		padding-right: 20px;
-		width: 265px;
+		width: 80%;
 	}
 
 	// .chat__submit
