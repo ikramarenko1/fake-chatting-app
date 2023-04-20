@@ -86,7 +86,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(184, 184, 184, 0.8);
   border-radius: 20px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
   z-index: 2;
@@ -158,7 +158,7 @@ body {
 }
 .chat__messages {
   flex: 1 1 auto;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -166,13 +166,14 @@ body {
 .chat__messages .message {
   clear: both;
   float: left;
-  padding: 6px 10px 7px;
+  padding: 10px 15px;
   border-radius: 10px 10px 10px 0;
-  background: rgba(0, 0, 0, 0.3);
-  margin: 15px 0;
-  font-size: 11px;
+  background: rgba(0, 0, 0, 0.8);
+  margin-block: 15px;
+  -webkit-margin-start: 45px;
+          margin-inline-start: 45px;
+  font-size: 12px;
   line-height: 1.4;
-  margin-left: 35px;
   position: relative;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -181,7 +182,7 @@ body {
   position: absolute;
   bottom: -6px;
   left: 0;
-  border-top: 6px solid rgba(0, 0, 0, 0.3);
+  border-top: 6px solid rgba(0, 0, 0, 0.8);
   border-right: 7px solid transparent;
 }
 .chat__messages .message:last-child {
@@ -201,6 +202,9 @@ body {
   border-left: 5px solid transparent;
   border-top: 4px solid #257287;
   bottom: -4px;
+}
+.chat__messages .message.message__personal .timestamp {
+  right: 5px;
 }
 .chat__messages .message.new {
   transform: scale(0);
@@ -277,9 +281,10 @@ body {
 }
 .chat__messages .message .timestamp {
   position: absolute;
-  bottom: -15px;
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.3);
+  bottom: -20px;
+  left: 5px;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.8);
 }
 .chat__content {
   position: absolute;
@@ -345,11 +350,11 @@ body {
 .avatar {
   position: absolute;
   z-index: 1;
-  left: -35px;
+  left: -45px;
   bottom: -15px;
   border-radius: 30px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   overflow: hidden;
   margin: 0;
   padding: 0;
