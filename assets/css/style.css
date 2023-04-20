@@ -92,7 +92,7 @@ body {
   z-index: 2;
 }
 .chat__header {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   color: #fff;
   display: flex;
@@ -135,6 +135,10 @@ body {
 .chat__back-icon {
   width: 15px;
   margin-right: 5px;
+  transition: filter 0.1s ease;
+}
+.chat__back-icon:hover {
+  filter: invert(0.6);
 }
 .chat__avatar {
   width: 35px;
@@ -289,11 +293,20 @@ body {
   align-items: center;
   flex: 0 1 55px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
+  gap: 10px;
 }
 .chat__send-box textarea:focus:-webkit-placeholder {
   color: transparent;
+}
+.chat__attachment {
+  width: 25px;
+  height: 25px;
+  transition: filter 0.1s ease;
+}
+.chat__attachment:hover {
+  filter: invert(0.6);
 }
 .chat__input {
   background: none;
@@ -302,7 +315,7 @@ body {
   resize: none;
   color: rgb(255, 255, 255);
   font-size: 14px;
-  height: 40px;
+  height: 20px;
   line-height: 1.2;
   margin: 0;
   padding-right: 20px;
@@ -310,21 +323,23 @@ body {
 }
 .chat__submit {
   border: none;
-  color: #fff;
-  background: #223596;
+  background: rgba(255, 255, 255, 0.7);
   font-size: 12px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
   line-height: 1;
-  padding: 10px 20px;
+  border-radius: 50%;
   outline: none;
   transition: all 0.2s ease;
 }
 .chat__submit:hover {
-  background: #fff;
-  color: #223596;
+  background: rgb(255, 255, 255);
+}
+.chat__submit img {
+  width: 30px;
+  height: 30px;
 }
 
 .avatar {
