@@ -61,7 +61,7 @@ sub, sup {
 body {
   background: linear-gradient(135deg, #a0c0ff, #262a60);
   background-size: cover;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   line-height: 1.3;
   overflow: hidden;
@@ -105,10 +105,13 @@ body {
   text-transform: uppercase;
 }
 .chat__header h1, .chat__header h2 {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;
   margin: 0;
   padding: 0;
+}
+.chat__header h1 {
+  font-weight: 500;
 }
 @media (max-width: 325px) {
   .chat__header h1 {
@@ -118,7 +121,7 @@ body {
 .chat__header h2 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 0.2px;
   position: relative;
   padding-left: 10px;
 }
@@ -192,7 +195,7 @@ body {
   float: right;
   color: #fff;
   text-align: right;
-  background: linear-gradient(120deg, #248a52, #257287);
+  background: #666666;
   border-radius: 10px 10px 0 10px;
 }
 .chat__messages .message.message__personal::before {
@@ -200,7 +203,7 @@ body {
   right: 0;
   border-right: none;
   border-left: 5px solid transparent;
-  border-top: 4px solid #257287;
+  border-top: 4px solid #666666;
   bottom: -4px;
 }
 .chat__messages .message.message__personal .timestamp {
