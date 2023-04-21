@@ -6,7 +6,6 @@ const avatarImage = './assets/images/avatar.jpg';
 // Сообщения, которые будет присылать фейковый пользователь
 const fakeMessages = [
 	`<p>Привет! Как твои дела?</p>`,
-	`<img src="./assets/images/iphone.jpg">`,
 	`<p>Рад, что ты наконец появился в сети!</p>`,
 	`<p>Есть много что тебе рассказать..</p>`,
 	`<p>Та ничего особенного на самом деле. Учусь, работаю..</p>`,
@@ -131,4 +130,10 @@ function fakeMessage() {
 		loadingMessage.remove();
 		addMessageToPage(fakeMessages.shift()); // .shift() - возвращает первый элемент массива fakeMessages и удаляет его из массива.
 	}, 1000 + (Math.random() * 20) * 100);
-}
+};
+
+
+// Перезагрузка страницы при клике на стрелку назад
+$('.chat__back-icon').click(function() {
+	location.reload();
+});
