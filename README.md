@@ -15,3 +15,8 @@ ___
 
 - chat interface built on jQuery
 - use of pre-prepared responses to interact with users
+
+___
+
+:heavy_exclamation_mark: **уйти от .mCSB**    
+:heavy_exclamation_mark: **сделать реализацию формы с отправкой заявки**
