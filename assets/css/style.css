@@ -215,6 +215,10 @@ body {
   animation: bounce 0.5s linear both;
   -webkit-animation: bounce 0.5s linear both;
 }
+.chat__messages .message.new img {
+  width: 100%;
+  max-width: 200px;
+}
 .chat__messages .message__loading::before {
   position: absolute;
   top: 50%;
