@@ -5,20 +5,22 @@ const avatarImage = './assets/images/avatar.jpg';
 
 // Сообщения, которые будет присылать фейковый пользователь
 const fakeMessages = [
-	'Hi there, it\'s the first message!',
-	'Nice to meet you!',
-	'How are you?',
-	'Not too bad, thanks',
-	'That\'s awesome',
-	'Okay, let me ask you some questions',
-	'How much do you have the problem',
-	'Not pretty good...',
-	'I\'m sure, everything will be OK',
-	'Anyway I\'ve gotta go now',
-	'It was a pleasure chat with you',
-	'Bye! Have a nice day!',
+	'Привет! Как твои дела?',
+	'Рад, что ты наконец появился в сети!',
+	'Есть много что тебе рассказать..',
+	'Та ничего особенного на самом деле. Учусь, работаю..',
+	'А еще купил телефон, прикинь?',
+	'Та айфон взял, никак не могу нарадоваться',
+	'А у тебя что нового?',
+	'Блин, очень круто на самом деле, ты большой молодец!',
+	'Как бы оно не было, ты справишься, уверен в тебе',
+	'Обязательно приезжай, нам нужно встретиться!',
+	'Ладненько, я побежал, нужно бежать учиться',
+	'Пока, хорошего тебе дня!',
 	':)'
 ];
+
+let fakeMessageCounter = 0;
 
 
 // Инициализация скроллбара и отображение первого сообщения при загрузке страницы
@@ -94,6 +96,11 @@ messageSubmit.on('click', insertMessage);
 
 // Отображение имитации печатания и смена на сообщение
 function fakeMessage() {
+	if (fakeMessages.length === 0) { // если кол-во элементов в массиве = 0 - выходим
+		alert('Пользователь вышел из сети..');
+		return false;
+	}
+
 	if (messageInput.val() !== '') { // если поле для ввода не пустое - выходим
 		return false;
 	}
